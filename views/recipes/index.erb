@@ -1,0 +1,26 @@
+<header>
+    <h1>Recipe Keeper</h1>
+    <nav>
+    </nav>
+</header>
+
+<body>
+<section class='recipes'>
+        <% recipes.each do |recipe| %>
+            <section class="recipe">
+                <header>
+                    <h2><%= recipe['name']%> </h2>
+
+                    <section class="controls">
+                        <form action="/recipes/<%= recipe['id'] %>/likes" method="POST">
+                            <button>Like</button>
+                        </form>
+                    </section>
+                </header>
+
+            <a href="/recipes/<%= recipe['id'] %>/recipe"><img src="<%= recipe['image_url'] %>" alt=""></a>
+                
+            </section>
+        <% end %>
+    </section>
+</body>

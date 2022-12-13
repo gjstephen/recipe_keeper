@@ -1,11 +1,11 @@
-     
+require 'dotenv/load'   
 require 'sinatra'
+require 'bcrypt'
+require './db/db'
+require 'httparty'
 
-get '/' do
-  erb :index
-end
+# controllers
+require './controllers/recipes_controller'
 
-
-
-
-
+# models
+require './models/recipes'

@@ -1,0 +1,19 @@
+<h2><%= recipe['name'] %></h2>
+
+ <a href="/recipes/<%= recipe['id'] %>/edit">Edit</a>
+
+<p>Creator: <%=  %></p>
+<img src="<%= recipe['image_url'] %>" alt="" class='recipe_detail'>
+
+<section class='minutia'>
+    <ul>
+        <li>Rating: <%= recipe['rating'] %></li>
+        <li>Servings: <%= recipe['servings'] %></li>
+        <li>Time: <%= recipe['time'] %></li>
+        <li>Source: <%= recipe['source'] %></li>
+        <li>Category: <%= recipe['category'] %></li>
+    </ul>
+</section>
+
+<p>Ingredients: <%= recipe['ingredients'] %></p>
+<p>Directions: <%= recipe['directions'] %></p>

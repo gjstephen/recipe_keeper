@@ -1,0 +1,58 @@
+<h2>Edit Recipe</h2>
+<p>Creator: <%=  %></p>
+<img src="<%= recipe['image_url'] %>" alt="" class='recipe_detail'>
+
+<section class='minutia'>
+<form action="/recipes/<%= recipe['id'] %>" method='POST'>
+    <input type="hidden" name="_method" value="put">
+
+    <p>
+        <label for="">Name:</label>
+        <input type="text" name='name' value="<%= recipe['name'] %>">
+    </p>
+
+    <p>
+        <label for="">Image URL:</label>
+        <input type="text" name='image_url' value="<%= recipe['image_url'] %>">
+    </p>
+    
+
+    <ul>
+        <li>
+            <label for="">Rating:</label>
+            <input type="text" name='rating' value="<%= recipe['rating'] %>">
+        </li>
+
+        <li>
+            <label for="">Servings:</label>
+            <input type="text" name='servings' value="<%= recipe['servings'] %>">
+        </li>
+
+        <li>
+            <label for="">Time:</label>
+            <input type="text" name='time' value="<%= recipe['time'] %>">
+        </li>
+
+        <li>
+            <label for="">Source:</label>
+            <input type="text" name='source' value="<%= recipe['source'] %>">
+        </li>
+
+        <li>
+            <label for="">Category</label>
+            <input type="text" name='category' value="<%= recipe['category'] %>">
+        </li>
+    </ul>
+
+    <p>
+        <label for="">Ingredients:</label>
+        <input type="text" name='ingredients' value="<%= recipe['ingredients'] %>">
+    </p>
+
+    <p>
+        <label for="">Directions:</label>
+        <input type="text" name='directions' value="<%= recipe['directions'] %>" class='input directions'>
+    </p>
+
+    <button>Update Food</button>
+</form>
