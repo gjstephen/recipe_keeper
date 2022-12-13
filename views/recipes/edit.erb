@@ -19,8 +19,8 @@
 
     <ul>
         <li>
-            <label for="">Rating:</label>
-            <input type="text" name='rating' value="<%= recipe['rating'] %>">
+            <label for="">Rating (between 1 and 5):</label>
+            <input type="number" name='rating' value="<%= recipe['rating'] %>"  min="1" max="5">
         </li>
 
         <li>
@@ -30,7 +30,7 @@
 
         <li>
             <label for="">Time:</label>
-            <input type="text" name='time' value="<%= recipe['time'] %>">
+            <input type="time" name='time' value="<%= recipe['time'] %>">
         </li>
 
         <li>
@@ -55,4 +55,5 @@
     </p>
 
     <button>Update Food</button>
+    <a href="/recipes/<%= recipe['id'] %>/recipe">Cancel</a>
 </form>

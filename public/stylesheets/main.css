@@ -56,3 +56,13 @@ button {
 .input.directions {
     width: fit-content
 }
+
+.recipe_link {
+    border: 1px solid black;
+    padding: 0.25rem 0.5rem;
+    background-color: none;
+    color: white;
+    font-size: 0.8rem;
+    text-decoration: none;
+    cursor: pointer;
+}

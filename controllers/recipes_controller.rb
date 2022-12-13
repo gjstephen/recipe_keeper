@@ -62,5 +62,5 @@ put '/recipes/:id' do
     
     update_recipe(id, name, image_url, rating, servings, time, source, category, ingredients, directions)
 
-    redirect '/recipes/:id/recipe'
+    redirect "/recipes/#{id}/recipe"
 end
