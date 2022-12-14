@@ -1,12 +1,14 @@
 <h2><%= recipe['name'] %></h2>
 
-<section class="controls">
-    <a href="/recipes/<%= recipe['id'] %>/edit" class="button">Edit</a>
-    <form action="/recipes/<%= recipe['id'] %>" method="POST">
-        <input type="hidden" name="_method" value="delete">
-        <button>Delete</button>
-    </form>
-</section>
+<% if is_creator?(recipe['user_id']) %>
+    <section class="controls">
+        <a href="/recipes/<%= recipe['id'] %>/edit" class="button">Edit</a>
+        <form action="/recipes/<%= recipe['id'] %>" method="POST">
+            <input type="hidden" name="_method" value="delete">
+            <button>Delete</button>
+        </form>
+    </section>
+<% end %>
 
 <p>Creator: <%=  %></p>
 <% if recipe['image_url'] == ''%>

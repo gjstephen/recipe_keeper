@@ -13,3 +13,11 @@ def current_user
         nil
     end
 end
+
+def is_creator?(creator)
+    if session['user_id'] == creator
+        return true
+    else
+        return false
+    end
+end
