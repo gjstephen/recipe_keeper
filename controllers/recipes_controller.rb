@@ -41,13 +41,13 @@ get '/recipes/:id/recipe' do
 
     recipe = get_recipe(id)
 
-    directions = directions_array_split(recipe['directions'])
-    ingredients = recipe['ingredients'].slice(1..-2).delete('"').split(',')
+    # directions = directions_array_split(recipe['directions'])
+    # ingredients = recipe['ingredients'].slice(1..-2).delete('"').split(',')
 
     erb :'recipes/recipe_detail', locals: {
         recipe: recipe,
-        directions: directions,
-        ingredients: ingredients
+        # directions: directions,
+        # ingredients: ingredients
     }
 
 end
@@ -59,14 +59,14 @@ get '/recipes/:id/edit' do
 
     recipe = get_recipe(id)
 
-    directions = directions_array_split(recipe['directions'])
+    # directions = directions_array_split(recipe['directions'])
     # ingredients = recipe['ingredients'].slice(1..-2).delete('"').split(',')
-    ingredients = recipe['ingredients'].delete('"').split(',')
+    # ingredients = recipe['ingredients'].delete('"').split(',')
 
     erb :'recipes/edit', locals: {
         recipe: recipe,
-        directions: directions,
-        ingredients: ingredients,
+        # directions: directions,
+        # ingredients: ingredients,
         tester: tester
     }
 end
@@ -81,8 +81,8 @@ put '/recipes/:id' do
     time = params['time']
     source = params['source']
     # ingredients = params['ingredients'].split "\r\n"
-    directions = params['directions'].split "\r\n"
-    ingredients = params['ingredients'].chomp
+    directions = params['directions']
+    ingredients = params['ingredients']
     
     update_recipe(id, name, image_url, rating, servings, time, source, category, ingredients, directions)
 

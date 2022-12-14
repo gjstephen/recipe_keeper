@@ -1,6 +1,6 @@
 <h2><%= recipe['name'] %></h2>
 
- <a href="/recipes/<%= recipe['id'] %>/edit">Edit</a>
+ <a href="/recipes/<%= recipe['id'] %>/edit" class="button">Edit</a>
 
 <p>Creator: <%=  %></p>
 <img src="<%= recipe['image_url'] %>" alt="" class='recipe_detail'>
@@ -16,27 +16,28 @@
     </ul>
 </section>
 
-<p>Ingredients: <%= recipe['ingredients'].slice(1..-5)%></p>
-
-<p>Ingredients: <%= recipe['ingredients'].delete('"').split(',') %></p>
-
-<% recipe['ingredients'].delete('"').split("\r\n").each do |thing| %>
-    <p> <%= thing %></p>
-<% end %>
-
-
 <section class='ingredients'>
-<p>Ingredients: </p>
-
+    <label>Ingredients: </label>
+    <ul>
+        <% if recipe['ingredients'] != '' %>
+            <% recipe['ingredients'].delete('"').split("\r\n").each do |thing| %>
+                <li> <%= thing %></li>
+            <% end %>
+        <% end %>
+    </ul>
 </section>
 
-<p>Directions: <%= recipe['directions'] %></p>
-
 <section class='directions'>
-<p>Directions: </p>
-<% directions.each do |step| %>
-    <%= step %>
-<% end %>
+    <label>Directions: </label>
+    <ul>
+        <% if recipe['directions'] != '' %>
+            <% recipe['directions'].delete('"').split("\r\n").each do |step| %>
+                <li> <%= step %></li>
+            <% end %>
+        <% end %>
+    </ul>
+</section>
+
 </section>
 
 

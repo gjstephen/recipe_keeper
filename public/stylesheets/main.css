@@ -19,8 +19,7 @@ body {
     object-fit: cover;
 }
 
-a,
-button {
+.button {
     border: 1px solid black;
     padding: 0.25rem 0.5rem;
     background-color: rgb(212, 41, 41);

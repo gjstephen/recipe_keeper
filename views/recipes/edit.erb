@@ -46,16 +46,14 @@
 
     <p>
         <label for="">Ingredients:</label>
-        <textarea name="ingredients" id="" cols="30" rows="10">
-            <%= recipe['ingredients'] %>
-        </textarea>
+        <textarea name="ingredients" id="" cols="30" rows="10"><%= recipe['ingredients'] %></textarea>
     </p>
 
     <p>
         <label for="">Directions:</label>
-        <textarea name="directions" id="" cols="30" rows="10"><% directions.each do |step| %><%= step %><% end %></textarea>
+        <textarea name="directions" id="" cols="30" rows="10"><%= recipe['directions'] %></textarea>
     </p>
 
-    <button>Update Food</button>
-    <a href="/recipes/<%= recipe['id'] %>/recipe">Cancel</a>
+    <button class="button">Update Food</button>
+    <a href="/recipes/<%= recipe['id'] %>/recipe" class="button">Cancel</a>
 </form>
