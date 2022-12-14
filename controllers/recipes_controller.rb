@@ -98,3 +98,24 @@ end
 #         ingredients: ingredients
 #     }
 # end
+
+get '/recipes/new' do
+    erb :'/recipes/new'
+end
+
+put '/recipes' do
+    name = params['name']
+    image_url = params['image_url']
+    # rating = params['rating']
+    category = params['category']
+    servings = params['servings']
+    time = params['time']
+    source = params['source']
+    directions = params['directions']
+    ingredients = params['ingredients']
+    
+    create_recipe(name, image_url, servings, time, source, category, ingredients, directions)
+    # create_recipe(name, image_url, rating, servings, time, source, category, ingredients, directions)
+
+    redirect '/'
+end

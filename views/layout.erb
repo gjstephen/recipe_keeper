@@ -7,14 +7,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-  <header>
-    <h1><a href="/">Recipe Keeper</a></h1>
-    <nav>
-      
-    </nav>
+  <header class="global_header">
+    <h1 class="site_name"><a href="/">Recipe Keeper</a></h1>
+    
+    <section class="nav_bar">
+      <nav class='header_nav'>
+        <ul class="nav_list">
+          <li><a href="/">Home Page</a></li>
+          <li>Liked Recipes</li>
+          <li>Created Recipes</li>
+          <li><a href="/recipes/new">Create New Recipe</a></li>
+        </ul>
+      </nav>
+    </section>
+
+    <p><a href="/sessions/new">Sign In</a></p>
   </header>
 
-  <%= yield %>
+  <main>
+    <%= yield %>
+  </main>
 
 </body>
 </html>

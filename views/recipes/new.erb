@@ -1,0 +1,59 @@
+<h2>Edit Recipe</h2>
+<p>Creator: <%=  %></p>
+
+<form action="/recipes" method='POST' class="new_recipe">
+    <input type="hidden" name="_method" value="put">
+
+    <p>
+        <label for="">Name:</label>
+        <input type="text" name='name' required>
+    </p>
+
+    <p>
+        <label for="">Image URL:</label>
+        <input type="text" name='image_url'>
+    </p>
+    
+
+    <ul>
+        <%# <li> %>
+            <%# <label for="">Rating (between 1 and 5):</label> %>
+            <%# <input type="number" name='rating' min="1" max="5" required> %>
+            <%# <input type="range" name='rating' min="0" max="5"  %>
+            <%# step="0.5" value="2.5" required> %>
+        <%# </li> %>
+
+        <li>
+            <label for="">Servings:</label>
+            <input type="text" name='servings' required>
+        </li>
+
+        <li>
+            <label for="">Time:</label>
+            <input type="time" name='time'>
+        </li>
+
+        <li>
+            <label for="">Source:</label>
+            <input type="text" name='source'>
+        </li>
+
+        <li>
+            <label for="">Category</label>
+            <input type="text" name='category'>
+        </li>
+    </ul>
+
+    <p>
+        <label for="">Ingredients:</label>
+        <textarea name="ingredients" id="" cols="30" rows="10" required></textarea>
+    </p>
+
+    <p>
+        <label for="">Directions:</label>
+        <textarea name="directions" id="" cols="30" rows="10" required></textarea>
+    </p>
+
+    <button class="button">Create Recipe</button>
+    <a href="/" class="button">Cancel</a>
+</form>
