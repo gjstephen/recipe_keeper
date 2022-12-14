@@ -16,5 +16,4 @@ require './models/recipes'
 require './models/users'
 
 # helpers
-require './helpers/recipes'
 require './helpers/sessions'
