@@ -8,7 +8,7 @@
 </head>
 <body>
   <header class="global_header">
-    <h1 class="site_name"><a href="/">Recipe Keeper</a></h1>
+    <h1 class="site_name">Recipe Keeper</h1>
     
     <section class="nav_bar">
       <nav class='header_nav'>
@@ -20,8 +20,15 @@
         </ul>
       </nav>
     </section>
-
-    <p><a href="/sessions/new">Sign In</a></p>
+    
+    <% if logged_in?%>
+      <form action="/sessions" method="POST">
+            <input type="hidden" name="_method" value="delete">
+            <button>Log Out</button>
+        </form>
+    <% else %>
+      <p><a href="/sessions/new">Sign In</a></p>
+    <% end %>
   </header>
 
   <main>

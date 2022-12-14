@@ -1,48 +1,18 @@
-<section class="session_new">
-    <section>
-        <h2>Log In</h2>
 
-        <form action="/sessions" method='POST' class="sign_in_form">
-            <label for="">Email:</label>
-            <input type="text" name='email'>
-            
-            <label for="">Password:</label>
-            <input type="password" name='password'>
+<section>
+    <h2>Log In</h2>
 
-            <button>Log In</button>
-        </form>
-    </section>
+    <form action="/sessions" method='POST' class="sign_in_form">
+        <label for="">Email:</label>
+        <input type="text" name='email'>
+        
+        <label for="">Password:</label>
+        <input type="password" name='password'>
 
-    <section>
-        <h2>Sign Up</h2>
-
-        <form action="/users" method='POST' class="sign_up_form">
-            <section class="sign_up labels">
-                <label for="">First Name:</label>
-
-                <label for="">Last Name:</label>
-                
-                <label for="">Email:</label>
-                
-                <label for="">Password:</label>
-
-                <label for="">Confirm Password:</label>
-            </section>
-
-            <section class="sign_up inputs">
-                <input type="text" name='first_name' required>
-
-                <input type="text" name='last_name' required>
-                
-                <input type="text" name='email' required>
-                
-                <input type="password" name='password' required>
-
-                <input type="password" name='confirm_password' required>
-                <div>
-                    <button class="sign_up_btn">Sign Up</button>
-                </div>
-            </section>
-        </form>
-    </section>
+        <button>Log In</button>
+    </form>
 </section>
+
+<h3>OR</h3>
+
+<a href="/users/new">Create a new account.</a>

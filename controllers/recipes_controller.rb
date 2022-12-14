@@ -119,3 +119,16 @@ put '/recipes' do
 
     redirect '/'
 end
+
+delete '/recipes/:id' do
+
+    if !logged_in?
+        redirect '/'
+    end
+
+    id = params['id']
+
+    delete_recipe(id)
+
+    redirect '/'
+end

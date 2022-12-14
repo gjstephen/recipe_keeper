@@ -20,6 +20,7 @@ body {
 
 .nav_bar{
     background-color: rgb(47, 8, 83);
+    padding: 0.8rem 0;
 }
 
 .nav_list {
@@ -28,8 +29,8 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    gap: 2rem;
-    width: 40%;
+    /* gap: 2rem; */
+    width: 80%;
     margin: 0 auto;
     color: white;
 }
@@ -123,15 +124,4 @@ body {
 
 textarea {
     min-width: 30rem;
-}
-
-.session_new {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    width: 80%;
-    margin: 0 auto;
-    /* text-align: center; */
-    align-content: center;
-    align-items: center;
-    /* justify-content: space-between; */
 }

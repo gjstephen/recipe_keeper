@@ -4,6 +4,8 @@ require 'bcrypt'
 require './db/db'
 require 'httparty'
 
+enable :sessions
+
 # controllers
 require './controllers/recipes_controller'
 require './controllers/users_controller'
@@ -15,3 +17,4 @@ require './models/users'
 
 # helpers
 require './helpers/recipes'
+require './helpers/sessions'

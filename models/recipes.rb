@@ -17,3 +17,7 @@ end
 def create_recipe(name, image_url, servings, time, source, category, ingredients, directions)
     run_sql('INSERT INTO recipes(name, image_url, servings, time, source, category, ingredients, directions) VALUES($1, $2, $3, $4, $5, $6, $7, $8)', [name, image_url, servings, time, source, category, ingredients, directions])
 end
+
+def delete_recipe(id)
+    run_sql('DELETE FROM recipes WHERE id = $1', [id])
+end

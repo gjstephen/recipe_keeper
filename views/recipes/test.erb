@@ -1,9 +1,0 @@
-<% recipes.each do |recipe| %>
-    <p> <%= recipe['name'] %> </p>
-    <p> <%= recipe['rating'] %> </p>
-    <p> <%= recipe['ingredients'].slice(1..-2).delete('"').split(',') %> </p>
-    <% recipe['ingredients'].slice(1..-2).delete('"').split(',').each do |thing| %>
-       <p> <%= thing %></p>
-    <% end %>
-    <p> <%= recipe['directions'] %> </p>
-<% end %>
