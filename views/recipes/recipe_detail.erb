@@ -12,9 +12,31 @@
         <li>Time: <%= recipe['time'] %></li>
         <li>Source: <%= recipe['source'] %></li>
         <li>Category: <%= recipe['category'] %></li>
-        
+
     </ul>
 </section>
 
-<p>Ingredients: <%= recipe['ingredients'] %></p>
+<p>Ingredients: <%= recipe['ingredients'].slice(1..-5)%></p>
+
+<p>Ingredients: <%= recipe['ingredients'].delete('"').split(',') %></p>
+
+<% recipe['ingredients'].delete('"').split("\r\n").each do |thing| %>
+    <p> <%= thing %></p>
+<% end %>
+
+
+<section class='ingredients'>
+<p>Ingredients: </p>
+
+</section>
+
 <p>Directions: <%= recipe['directions'] %></p>
+
+<section class='directions'>
+<p>Directions: </p>
+<% directions.each do |step| %>
+    <%= step %>
+<% end %>
+</section>
+
+

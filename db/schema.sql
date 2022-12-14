@@ -22,6 +22,10 @@ VALUES('Tacos', '4', 4, '01:30', '{"Crumble sausage into a large skillet.", "Add
 INSERT INTO test_table(name, rating, servings, time, ingredients, directions)
 VALUES('Pizza', '4', 4, '01:30', ARRAY['Crumble sausage into a large skillet.', 'Add sausage, pasta sauce, and wine. Bring to a boil.'], ARRAY['1/2 cup Parmesean Cheese, grated', '1/4 teaspoon Fennel Seed, crushed', '1/4 cup Fresh Basil, chopped']);
 
+1/2 cup Parmesean Cheese (grated)
+1/4 teaspoon Fennel Seed (crushed)
+1/4 cup Fresh Basil (chopped)
+
 CREATE TABLE recipes(
     id SERIAL PRIMARY KEY,
     user_id INTEGER,

@@ -27,24 +27,47 @@ get '/' do
     }
 end
 
+
+# get '/' do
+#     recipes = run_sql('SELECT * FROM test_table')
+
+#     erb :'recipes/test', locals: {
+#         recipes: recipes
+#     }
+# end
+
 get '/recipes/:id/recipe' do
     id = params['id']
 
     recipe = get_recipe(id)
 
+    directions = directions_array_split(recipe['directions'])
+    ingredients = recipe['ingredients'].slice(1..-2).delete('"').split(',')
+
     erb :'recipes/recipe_detail', locals: {
-        recipe: recipe
+        recipe: recipe,
+        directions: directions,
+        ingredients: ingredients
     }
 
 end
 
 get '/recipes/:id/edit' do
     id = params['id']
+    
+    tester = 'test'
 
     recipe = get_recipe(id)
 
+    directions = directions_array_split(recipe['directions'])
+    # ingredients = recipe['ingredients'].slice(1..-2).delete('"').split(',')
+    ingredients = recipe['ingredients'].delete('"').split(',')
+
     erb :'recipes/edit', locals: {
-        recipe: recipe
+        recipe: recipe,
+        directions: directions,
+        ingredients: ingredients,
+        tester: tester
     }
 end
 
@@ -57,10 +80,21 @@ put '/recipes/:id' do
     servings = params['servings']
     time = params['time']
     source = params['source']
-    ingredients = params['ingredients']
-    directions = params['directions']
+    # ingredients = params['ingredients'].split "\r\n"
+    directions = params['directions'].split "\r\n"
+    ingredients = params['ingredients'].chomp
     
     update_recipe(id, name, image_url, rating, servings, time, source, category, ingredients, directions)
 
     redirect "/recipes/#{id}/recipe"
 end
+
+# put '/recipes/:id' do
+#     id = params['id']
+#     ingredients = params['ingredients'].split "\r\n"
+#     # directions = params['directions']
+
+#     erb :'recipes/test', locals: {
+#         ingredients: ingredients
+#     }
+# end

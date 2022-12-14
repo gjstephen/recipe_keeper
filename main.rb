@@ -9,3 +9,6 @@ require './controllers/recipes_controller'
 
 # models
 require './models/recipes'
+
+# helpers
+require './helpers/recipes'

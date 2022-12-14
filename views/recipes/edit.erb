@@ -46,12 +46,14 @@
 
     <p>
         <label for="">Ingredients:</label>
-        <input type="text" name='ingredients' value="<%= recipe['ingredients'] %>">
+        <textarea name="ingredients" id="" cols="30" rows="10">
+            <%= recipe['ingredients'] %>
+        </textarea>
     </p>
 
     <p>
         <label for="">Directions:</label>
-        <input type="text" name='directions' value="<%= recipe['directions'] %>" class='input directions'>
+        <textarea name="directions" id="" cols="30" rows="10"><% directions.each do |step| %><%= step %><% end %></textarea>
     </p>
 
     <button>Update Food</button>
