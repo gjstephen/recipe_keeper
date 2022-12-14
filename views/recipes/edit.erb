@@ -8,7 +8,7 @@
 
     <p>
         <label for="">Name:</label>
-        <input type="text" name='name' value="<%= recipe['name'] %>">
+        <input type="text" name='name' value="<%= recipe['name'] %>" required>
     </p>
 
     <p>
@@ -20,12 +20,12 @@
     <ul>
         <li>
             <label for="">Rating (between 1 and 5):</label>
-            <input type="number" name='rating' value="<%= recipe['rating'] %>"  min="1" max="5">
+            <input type="number" name='rating' value="<%= recipe['rating'] %>"  min="1" max="5" required>
         </li>
 
         <li>
             <label for="">Servings:</label>
-            <input type="text" name='servings' value="<%= recipe['servings'] %>">
+            <input type="text" name='servings' value="<%= recipe['servings'] %>" required>
         </li>
 
         <li>
@@ -46,12 +46,12 @@
 
     <p>
         <label for="">Ingredients:</label>
-        <textarea name="ingredients" id="" cols="30" rows="10"><%= recipe['ingredients'] %></textarea>
+        <textarea name="ingredients" id="" cols="30" rows="10" required><%= recipe['ingredients'] %></textarea>
     </p>
 
     <p>
         <label for="">Directions:</label>
-        <textarea name="directions" id="" cols="30" rows="10"><%= recipe['directions'] %></textarea>
+        <textarea name="directions" id="" cols="30" rows="10" required><%= recipe['directions'] %></textarea>
     </p>
 
     <button class="button">Update Food</button>
