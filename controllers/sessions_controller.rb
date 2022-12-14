@@ -18,3 +18,10 @@ post '/sessions' do
         erb 
     end
 end
+
+delete '/sessions' do
+    # logs the user out
+    session['user_id'] = nil
+
+    redirect '/'
+end
