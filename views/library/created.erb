@@ -1,5 +1,5 @@
 <header>
-    <h1>Recipe Keeper  </h1>
+    <h1>Recipes Created By: <%= user['username'] %>  </h1>
     <nav>
     </nav>
 </header>
@@ -17,7 +17,7 @@
                     
                     <section class="controls">
                         <form action="/recipes/<%= recipe['id'] %>/likes" method="POST" class="button">
-                            <button>Like</button>
+                            <button>Edit</button>
                         </form>
                     </section>
                 </header>

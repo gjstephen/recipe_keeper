@@ -1,9 +1,13 @@
 def all_recipes
-    run_sql('SELECT * FROM test_table')
+    run_sql('SELECT * FROM recipes')
 end
 
 def get_recipe(id)
     run_sql('SELECT * FROM recipes WHERE id = $1', [id])[0]
+end
+
+def get_recipe_tile()
+    run_sql('SELECT name, user_id, username, image_url FROM recipes INNER JOIN users ON users.id = recipes.user_id')
 end
 
 def update_recipe(id, name, image_url, rating, servings, time, source, category, ingredients, directions)

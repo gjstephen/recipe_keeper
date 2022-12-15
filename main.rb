@@ -10,10 +10,12 @@ enable :sessions
 require './controllers/recipes_controller'
 require './controllers/users_controller'
 require './controllers/sessions_controller'
+require './controllers/library_controller'
 
 # models
 require './models/recipes'
 require './models/users'
+require './models/library'
 
 # helpers
 require './helpers/sessions'

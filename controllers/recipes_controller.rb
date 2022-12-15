@@ -1,6 +1,6 @@
 
 get '/' do
-    recipes = run_sql('SELECT * FROM recipes')
+    recipes = all_recipes()
     
     if logged_in?
         user = find_user_by_id(session['user_id'])
