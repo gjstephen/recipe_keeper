@@ -19,3 +19,4 @@ require './models/library'
 
 # helpers
 require './helpers/sessions'
+require './helpers/library'

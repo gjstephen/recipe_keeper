@@ -16,9 +16,15 @@
                     </section>
                     
                     <section class="controls">
-                        <form action="/recipes/<%= recipe['id'] %>/likes" method="POST" class="button">
-                            <button>Like</button>
-                        </form>
+                        <% if is_liked?(session['user_id'], recipe['id']) %>
+                            <form action="/recipes/home/<%= recipe['id'] %>/likes" method="POST" class="button">
+                                <button>Liked</button>
+                            </form>
+                        <% else %>
+                            <form action="/recipes/home/<%= recipe['id'] %>/likes" method="POST" class="button">
+                                <button>Like</button>
+                            </form>
+                        <% end %>
                     </section>
                 </header>
 

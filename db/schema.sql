@@ -45,3 +45,13 @@ ADD CONSTRAINT unique_users
 UNIQUE(username, email);
 
 UPDATE users SET username = 'admin' WHERE id = 1;
+
+CREATE TABLE likes(
+    id SERIAL PRIMARY KEY,
+    user_id INTEGER,
+    recipe_id INTEGER
+);
+
+ALTER TABLE likes
+ADD CONSTRAINT unique_likes
+UNIQUE(user_id, recipe_id);
