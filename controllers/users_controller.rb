@@ -31,3 +31,15 @@ post '/users/new' do
     end
     
 end
+
+get '/user/:id/page' do
+    id = params['id']
+    user = find_user_by_id(id)
+
+    recipes = get_recipes_by_user(id)
+
+    erb :'/users/index', locals: {
+        recipes: recipes,
+        user: user
+    }
+end

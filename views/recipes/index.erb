@@ -10,19 +10,19 @@
             <section class="recipe">
                 <header class='tile_header'>
                     <section class='top'>
-                        <h2 class='tile_title'><%= recipe['name'] %> </h2>
+                        <h2 class='tile_title'><%= recipe['name'] %></h2>
                         
                         <p><%= find_user_by_id(recipe['user_id'])['username'] %></p>
                     </section>
                     
                     <section class="controls">
                         <% if is_liked?(session['user_id'], recipe['id']) %>
-                            <form action="/recipes/home/<%= recipe['id'] %>/likes" method="POST" class="button">
-                                <button>Unlike</button>
+                            <form action="/recipes/home/<%= recipe['id'] %>/likes" method="POST">
+                                <button class='unlike-btn'>&#10084;</button>
                             </form>
                         <% else %>
-                            <form action="/recipes/home/<%= recipe['id'] %>/likes" method="POST" class="button">
-                                <button>Like</button>
+                            <form action="/recipes/home/<%= recipe['id'] %>/likes" method="POST">
+                                <button class='like-btn'>&#10084;</button>
                             </form>
                         <% end %>
                     </section>

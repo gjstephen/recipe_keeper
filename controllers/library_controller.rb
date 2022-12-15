@@ -34,7 +34,7 @@ post '/recipes/home/:id/likes' do
 end
 
 get '/library/liked' do
-    id =
+    id = ''
 
     if logged_in?
         id = session['user_id']

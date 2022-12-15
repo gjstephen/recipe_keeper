@@ -1,5 +1,5 @@
 <header>
-    <h1>Recipes Liked By: <%= user['username'] %>  </h1>
+    <h1>Recipes Created By: <%= user['username'] %>  </h1>
     <nav>
     </nav>
 </header>
@@ -16,15 +16,9 @@
                     </section>
                     
                     <section class="controls">
-                        <% if is_liked?(session['user_id'], recipe['id']) %>
-                            <form action="/recipes/home/<%= recipe['id'] %>/likes" method="POST">
-                                <button class='unlike-btn'>&#10084;</button>
-                            </form>
-                        <% else %>
-                            <form action="/recipes/home/<%= recipe['id'] %>/likes" method="POST">
-                                <button class='like-btn'>&#10084;</button>
-                            </form>
-                        <% end %>
+                        <form action="/recipes/<%= recipe['id'] %>/likes" method="POST" class="button">
+                            <button>Edit</button>
+                        </form>
                     </section>
                 </header>
 

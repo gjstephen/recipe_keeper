@@ -10,7 +10,7 @@
     </section>
 <% end %>
 
-<p>Creator: <%= creator['first_name'] %></p>
+<p>Creator: <a href="/user/<%= creator['id'] %>/page"><%= creator['username'] %></a></p>
 <% if recipe['image_url'] == ''%>
     <img src="https://images.unsplash.com/photo-1531928351158-2f736078e0a1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="" class='recipe_detail'>
 <% else %>
@@ -18,15 +18,15 @@
 <% end %>
 
 
-<section class='minutia'>
-    <ul>
+<section>
+    <ul class='detail_list'>
         <li>Rating: <%= recipe['rating'] %></li>
         <li>Servings: <%= recipe['servings'] %></li>
         <li>Time: <%= recipe['time'] %></li>
-        <li>Source: <%= recipe['source'] %></li>
         <li>Category: <%= recipe['category'] %></li>
 
     </ul>
+    <p>Source: <%= recipe['source'] %></p>
 </section>
 
 <section class='ingredients'>
