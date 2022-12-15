@@ -32,3 +32,20 @@ post '/recipes/home/:id/likes' do
         redirect '/sessions/new'
     end
 end
+
+get '/library/liked' do
+    id =
+
+    if logged_in?
+        id = session['user_id']
+        recipes = get_liked_recipes(id)
+        user = find_user_by_id(session['user_id'])
+
+        erb :'library/liked', locals: {
+            recipes: recipes,
+            user: user
+        }
+    else
+        redirect '/sessions/new'
+    end
+end
