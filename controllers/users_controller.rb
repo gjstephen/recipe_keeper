@@ -2,7 +2,7 @@ get '/users/new' do
     erb :'users/new'
 end
 
-post '/users' do
+post '/users/new' do
     first_name = params['first_name']
     last_name = params['last_name']
     email = params['email']
@@ -20,7 +20,7 @@ post '/users' do
 
             erb :'/users/sign_up_issue', locals: {
                 error_message: error_message
-            }  
+            }
         end
     else
         error_message = 'Passwords did not match'

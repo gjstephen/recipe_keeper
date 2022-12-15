@@ -54,6 +54,12 @@
         <textarea name="directions" id="" cols="30" rows="10" required></textarea>
     </p>
 
+
+<% if logged_in? %>
     <button class="button">Create Recipe</button>
     <a href="/" class="button">Cancel</a>
+<% else %>
+    <h3>Please log in or create and account to create a recipe.</h3>
+<% end %>
+
 </form>

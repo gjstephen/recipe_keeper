@@ -8,7 +8,25 @@
 </head>
 <body>
   <header class="global_header">
-    <h1 class="site_name">Recipe Keeper</h1>
+    <section class="logo_tile">
+      <div>
+        <h1 class="site_name">Recipe Keeper</h1>
+      </div>
+      
+      <div class="user_welcome">
+        <% if logged_in?%>
+          <h3>Welcome <%= user['first_name']%> </h3>
+
+          <form action="/sessions" method="POST">
+                <input type="hidden" name="_method" value="delete">
+                <button>Log Out</button>
+            </form>
+        <% else %>
+          <p><a href="/sessions/new">Sign In</a></p>
+        <% end %>
+      
+      </div>
+    </section>
     
     <section class="nav_bar">
       <nav class='header_nav'>
@@ -21,16 +39,7 @@
       </nav>
     </section>
     
-    <% if logged_in?%>
-      <form action="/sessions" method="POST">
-            <input type="hidden" name="_method" value="delete">
-            <button>Log Out</button>
-        </form>
-    <% else %>
-      <p><a href="/sessions/new">Sign In</a></p>
-    <% end %>
   </header>
-
   <main>
     <%= yield %>
   </main>

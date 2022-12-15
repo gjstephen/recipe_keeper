@@ -14,10 +14,14 @@ end
 #     run_sql('INSERT INTO recipes(name, image_url, rating, servings, time, source, category, ingredients, directions) VALUES($1, $2, $3, $4, $5, $6, $7, $8, $9)', [name, image_url, rating, servings, time, source, category, ingredients, directions])
 # end
 
-def create_recipe(name, image_url, servings, time, source, category, ingredients, directions)
-    run_sql('INSERT INTO recipes(name, image_url, servings, time, source, category, ingredients, directions) VALUES($1, $2, $3, $4, $5, $6, $7, $8)', [name, image_url, servings, time, source, category, ingredients, directions])
+def create_recipe(name, image_url, servings, time, source, category, ingredients, directions, creator)
+    run_sql('INSERT INTO recipes(name, image_url, servings, time, source, category, ingredients, directions, user_id) VALUES($1, $2, $3, $4, $5, $6, $7, $8, $9)', [name, image_url, servings, time, source, category, ingredients, directions, creator])
 end
 
 def delete_recipe(id)
     run_sql('DELETE FROM recipes WHERE id = $1', [id])
+end
+
+def get_recipe_creator(recipe_id)
+    run_sql('SELECT name, id FROM users INNER JOIN ON users.id = recipes.user_id')
 end

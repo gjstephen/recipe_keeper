@@ -1,12 +1,15 @@
 <h2>Sign Up</h2>
 
-<form action="/users" method='POST' class="sign_up_form">
+
+<form action="/users/new" method='POST' class="sign_up_form">
     <section class="sign_up labels">
         <label for="">First Name:</label>
 
         <label for="">Last Name:</label>
         
         <label for="">Email:</label>
+
+        <label for="">Username:</label>
         
         <label for="">Password:</label>
 
@@ -19,10 +22,13 @@
         <input type="text" name='last_name' required>
         
         <input type="text" name='email' required>
+
+        <input type="text" name='username' required>
         
         <input type="password" name='password' required>
 
         <input type="password" name='confirm_password' required>
+
         <div>
             <button class="sign_up_btn">Sign Up</button>
         </div>

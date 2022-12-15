@@ -32,3 +32,16 @@ CREATE TABLE users(
 ALTER TABLE users
 ADD CONSTRAINT unique_users
 UNIQUE(email);
+
+-- second deployment
+
+ALTER TABLE users ADD COLUMN username TEXT;
+
+ALTER TABLE users
+DROP CONSTRAINT unique_users;
+
+ALTER TABLE users
+ADD CONSTRAINT unique_users
+UNIQUE(username, email);
+
+UPDATE users SET username = 'admin' WHERE id = 1;
