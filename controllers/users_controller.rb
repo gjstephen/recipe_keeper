@@ -8,11 +8,12 @@ post '/users/new' do
     email = params['email']
     password = params['password']
     confirm_password = params['confirm_password']
+    username = params['username']
   
     if password == confirm_password
 
         if find_user_by_email(email) == nil
-            create_user(first_name, last_name, email, password)
+            create_user(first_name, last_name, email, password, username)
 
             redirect '/'
         else

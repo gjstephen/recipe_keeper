@@ -2,7 +2,6 @@ def is_liked?(user_id, recipe_id)
     if get_like_status(user_id, recipe_id).to_a.count > 0
         return true
     else
-        puts 'no'
         return false
     end
 end
