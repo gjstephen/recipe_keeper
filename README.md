@@ -1,38 +1,37 @@
-# Project Name
-The briefest description of my cool project and why you should all use it.
+# Recipe Keeper
+I have created a web app where users can create and save their recipes favourite  in a single online location.
 
 # :computer: [Click here](https://recipe-keeper.fly.dev/) to see my live project!
 
 # :page_facing_up: About
-- How to use my awesome project
-- Download instructions (if relevant):
-
-```
-$ git clone my-awesome-app
-$ cd my-awesome-app
-$ node app.js
-```
-- Add in-app screenshots
+- Simply create an account to create your own recipes.
+- Once you've signed up, click the 'create new recipe' tab to build your own.
+- Fill out at least all the required fields and click 'save'.
+- You can also like recipes that other users have created.
+- Your liked recipes will be saved to the 'Liked Recipes' tab.
+- You do not need to log in to peruse through other users recipes.
 
 # :pencil2: Planning & Problem Solving
-- Talk about approach to the problem.
-- Add screenshots/drawings of doodles/plans during the planning phase.
-- Flow charts of app logic.
-![glow chart of logic](https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80)
+- I started out planning all the features that I wanted to add to the website.
+- I then split them into core features and additional features, based on their necessity for getting the web app up and running.
+- Based on this list I considered and planned the data types I would be using and how best to store them.
+- I then planned my wireframe based on the features and data I wanted to present.
+![trello board](https://imgur.com/Qdi9hSu)
 
 # :rocket: Cool Tech
-- Programming languages
-- Libraries
-- Animations
-- Anything else you'd be proud to show your parents
+- Ruby, HTML, CSS
+- PSQL
+- Sinatra
+- BCrypt
 
 # :scream: Bugs to fix :poop:
-- Anything a little broken
-- Anything a LOT broken
-- Buttons to not click too many times (cause its broken :unamused:)
+- add in additional features to round out user experience
 
 # :sob: Lessons learnt
-What I would do differently if I could wind back the clock...
+Learning how to store and retrieve list information of unknown size in a database was tricky, especially when also being able to display it on the webpage in a usable and appropriate format. This was the most challenging part of the project for me was this data manipulation in psql.
 
 # :white_check_mark: Future features
-Cool things I would add if I can keep working on this
+- Search bar to search for user recipes by keywords
+- Ability to add ingredients to a user shopping list
+- Ability to tick off ingredients and directions as you complete them while cooking
+- Users can comment on other user's recipes
