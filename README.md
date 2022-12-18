@@ -16,7 +16,7 @@ I have created a web app where users can create and save their recipes favourite
 - I then split them into core features and additional features, based on their necessity for getting the web app up and running.
 - Based on this list I considered and planned the data types I would be using and how best to store them.
 - I then planned my wireframe based on the features and data I wanted to present.
-![trello board]([https://imgur.com/Qdi9hSu](https://i.imgur.com/Qdi9hSu.png))
+![trello board](https://i.imgur.com/Qdi9hSu.png)
 
 # :rocket: Cool Tech
 - Ruby, HTML, CSS
